@@ -44,13 +44,13 @@ the solution should work and provide the basic functionality. Surely we would ap
 
 ## WebApi
 
-*	Please use C#.Net to build the API, as it is our main coding language
 *	Please create a webapi to retrieve loans.
+*	Use C#.Net to build the API, as it is our main coding language.
 *	You should use your own data store and don't hardcode loan accounts.
 *	Loan records can be manually entered into your data store.
 *	Api will be under heavy load in production hence the code should be performant.
-*	It is expected to have error/exception handling mechanisms in place
-*	It would be great if you use design patterns in your application
+*	It is expected to have error/exception handling mechanisms in place.
+*	It would be great if you use design patterns in your application.
 *	Components should be unit testable. Unit testing a few components should be enough.
 
 
