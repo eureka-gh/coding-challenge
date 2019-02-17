@@ -44,6 +44,7 @@ the solution should work and provide the basic functionality. Surely we would ap
 
 ## WebApi
 
+*	Please use C#.Net to build the API, as it is our main coding language
 *	Please create a webapi to retrieve loans.
 *	You should use your own data store and don't hardcode loan accounts.
 *	Loan records can be manually entered into your data store.
