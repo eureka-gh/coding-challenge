@@ -1,6 +1,6 @@
 import { LoanDefinition as Loan} from './model/loan-definition';
 
-export const loans: Loan[] = [
+export const DummyLoans: Loan[] = [
     {
         id: '1',
         balance: 100

@@ -1,9 +1,9 @@
 <table>
-     <ng-container *ngFor="let loan of loans">
+     <ng-container *ngFor="let loan of AllLoans()">
         <tr>
             <td>Balance</td>
             <td>{{loan.balance}}</td>
-            <td><input type="checkbox" ngModel="loan.selected" (click)="update(loan)"></td>
+            <td><input type="checkbox" ngModel="loan.selected" (click)="OnSelect(loan)"></td>
         </tr>
      </ng-container>
 </table>

@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { LoanSelectionService } from 'src/app/controller/loan-selection';
+import { Component, OnInit} from '@angular/core';
+import { LoanProviderService } from 'src/app/controller/loan-provider.service';
 
 @Component({
   selector: 'app-loan-summary',
@@ -7,12 +7,24 @@ import { LoanSelectionService } from 'src/app/controller/loan-selection';
   styleUrls: ['./loan-summary.component.css']
 })
 
-export class LoanSummaryComponent {
+export class LoanSummaryComponent implements OnInit {
     constructor(
-        private loanSelection: LoanSelectionService
+        private loanProvider: LoanProviderService
     ) {}
 
+    ngOnInit() {
+      this.loanProvider.Load();
+    }
+
     ShowSummaryAmount() {
-        return this.loanSelection.Sum();
+        return this.loanProvider.Sum();
+    }
+
+    IsLoanSelected() {
+        return this.loanProvider.Count() > 0;
+    }
+
+    CanApplyNewLoan() {
+        return this.loanProvider.loans.length < 3;
     }
 }

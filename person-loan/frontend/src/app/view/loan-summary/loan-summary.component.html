@@ -2,5 +2,9 @@
 <tr>
     <th>To apply for a TopUp of an existing loan amount, please select the loan below, make note of the Carry-over amount before proceeding.</th>
     <th>Carryover/Payout Amount {{ShowSummaryAmount()}}$</th>
+    <th><button [disabled]="!IsLoanSelected()" type="button">Apply for Increased Loan amounts</button></th>
 </tr>
+    <th></th>
+    <th></th>
+    <th><button [disabled]="!CanApplyNewLoan()" type="button">Apply for new Personal Loan</button></th>
 </table>
