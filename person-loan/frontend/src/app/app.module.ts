@@ -3,14 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LoanListComponent } from './view/loan-list/loan-list.component';
+import { LoanSummaryComponent } from './view/loan-summary/loan-summary.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoanListComponent,
+    LoanSummaryComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
