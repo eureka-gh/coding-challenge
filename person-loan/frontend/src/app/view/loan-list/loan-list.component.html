@@ -3,7 +3,7 @@
         <tr>
             <td>Balance</td>
             <td>{{loan.balance}}</td>
-            <td><input type="checkbox"></td>
+            <td><input type="checkbox" ngModel="loan.selected" (click)="update(loan)"></td>
         </tr>
      </ng-container>
 </table>
