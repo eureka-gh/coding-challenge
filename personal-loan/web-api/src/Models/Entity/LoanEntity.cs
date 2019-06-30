@@ -29,8 +29,8 @@ namespace LoanApi.Models
         {
             return new LoanDefinition()
             {
-                Id = this.RowKey,
-                Balance = this.Balance,
+                id = this.RowKey,
+                balance = this.Balance,
             };
         }
     }

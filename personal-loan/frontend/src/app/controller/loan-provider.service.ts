@@ -1,20 +1,19 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 
 import { LoanDefinition } from '../model/loan-definition';
-import { DummyLoans } from '../dummy.loans';
+// import { DummyLoans } from '../dummy.loans';
+import { ApiClient } from './api-client.service';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class LoanProviderService {
-  private data = DummyLoans;
   private selectedLoans = new Map();
   private sum = 0;
   loans: LoanDefinition[] = [];
 
-  constructor(private apiClient: HttpClient) {}
+  constructor(private apiClient: ApiClient) {}
 
   AddSelection(item: LoanDefinition) {
     this.selectedLoans.set(item.id, item.balance);
@@ -35,13 +34,9 @@ export class LoanProviderService {
   }
 
   Load() {
-    //let data = this.apiClient.get('/assert/dummy.db.json');
-    this.data.forEach(item => { this.loans.push(
-      {
-        id: item.id,
-        balance: Number(item.balance),
-        selected: false
-      });
-    } );
+    // assuem the login user has userId == '1'
+    this.apiClient.getUserLoans('1').subscribe(
+      loans => this.loans = loans
+      );
   }
 }
