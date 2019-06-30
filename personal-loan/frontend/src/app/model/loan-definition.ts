@@ -7,9 +7,4 @@ export class LoanDefinition {
         this.id = id;
         this.balance = banlance;
     }
-
-    /*
-    get Balance() { return this.balance; }
-    set Balance(val: number) {this.balance = val; }
-    */
 }
