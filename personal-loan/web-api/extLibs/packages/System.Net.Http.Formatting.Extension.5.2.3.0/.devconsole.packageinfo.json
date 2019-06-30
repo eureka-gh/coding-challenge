@@ -1,0 +1,33 @@
+{
+  "Identity": {
+    "id": "System.Net.Http.Formatting.Extension",
+    "version": "5.2.3.0"
+  },
+  "ProvenanceInfo": {
+    "Status": 2,
+    "Source": "https://msazure.pkgs.visualstudio.com/defaultcollection/_apis/packaging/nugetmirror/nuget/index.json",
+    "AcquisitionDate": "2019-05-21T16:28:18.0856559+10:00"
+  },
+  "Layout": {
+    "Files": [
+      {
+        "Path": "System.Net.Http.Formatting.Extension.nuspec",
+        "Size": 1044
+      },
+      {
+        "Path": "lib\\System.Net.Http.Extensions.dll",
+        "Size": 22232
+      },
+      {
+        "Path": "lib\\System.Net.Http.Formatting.dll",
+        "Size": 185544
+      },
+      {
+        "Path": "lib\\System.Net.Http.Primitives.dll",
+        "Size": 21720
+      }
+    ],
+    "FileRoot": "System.Net.Http.Formatting.Extension.5.2.3.0",
+    "Status": 1
+  }
+}

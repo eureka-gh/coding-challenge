@@ -1,0 +1,25 @@
+{
+  "Identity": {
+    "id": "Microsoft.Web.Infrastructure",
+    "version": "1.0.0.0"
+  },
+  "ProvenanceInfo": {
+    "Status": 2,
+    "Source": "https://msazure.pkgs.visualstudio.com/defaultcollection/_apis/packaging/oss/nuget/index.json",
+    "AcquisitionDate": "2019-05-21T16:28:22.0590622+10:00"
+  },
+  "Layout": {
+    "Files": [
+      {
+        "Path": "Microsoft.Web.Infrastructure.nuspec",
+        "Size": 707
+      },
+      {
+        "Path": "lib\\net40\\Microsoft.Web.Infrastructure.dll",
+        "Size": 45416
+      }
+    ],
+    "FileRoot": "Microsoft.Web.Infrastructure.1.0.0.0",
+    "Status": 1
+  }
+}
