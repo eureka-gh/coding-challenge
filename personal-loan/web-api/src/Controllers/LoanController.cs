@@ -23,7 +23,10 @@ namespace loanapi.Controllers
             response.Content.Headers.ContentType = new MediaTypeHeaderValue("text/html");
             return response;
         }
-
+        
+        /*
+         * get list of loans for given user
+         */
         [HttpGet]
         public HttpResponseMessage Get(string userId)
         {
