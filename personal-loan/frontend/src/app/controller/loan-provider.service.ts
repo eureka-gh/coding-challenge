@@ -16,13 +16,13 @@ export class LoanProviderService {
   constructor(private apiClient: ApiClient) {}
 
   AddSelection(item: LoanDefinition) {
-    this.selectedLoans.set(item.id, item.balance);
-    this.sum += item.balance;
+    this.selectedLoans.set(item.id, item.payoutOrCarryover);
+    this.sum += item.payoutOrCarryover;
   }
 
   RemoveSelection(item: LoanDefinition) {
     this.selectedLoans.delete(item.id);
-    this.sum -= item.balance;
+    this.sum -= item.payoutOrCarryover;
   }
 
   Sum() {

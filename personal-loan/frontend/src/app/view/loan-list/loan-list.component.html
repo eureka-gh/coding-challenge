@@ -1,9 +1,18 @@
 <table>
-     <ng-container *ngFor="let loan of AllLoans()">
-        <tr>
-            <td>Balance</td>
-            <td>{{loan.balance}}</td>
-            <td><input type="checkbox" ngModel="loan.selected" (click)="OnSelect(loan)"></td>
-        </tr>
-     </ng-container>
+  <ng-container *ngFor="let loan of AllLoans()">
+     <tr>
+         <td>Balance</td>
+         <td>${{loan.balance}}</td>
+         <td><input type="checkbox" ngModel="loan.selected" (click)="OnSelect(loan)">Top Up</td>
+     </tr>
+     <tr>
+       <table *ngIf="loan.selected">
+         <hr>
+         <tr>Balance includes Interest of ${{loan.interest}}</tr>
+         <tr>Early repayment fee ${{loan.earlyRepaymentFee}}</tr>
+         <tr>Payout / Carryover amount ${{loan.payoutOrCarryover}}</tr>
+         <hr>
+       </table>
+     </tr>
+  </ng-container>
 </table>

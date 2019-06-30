@@ -24,6 +24,8 @@ namespace LoanApi.Models
 
         public string UserId { get; set; }
         public int Balance { get; set; }
+        public int Interest { get; set; }
+        public int EarlyRepaymentFee { get; set; }
 
         public LoanDefinition ToDefinition()
         {
@@ -31,6 +33,9 @@ namespace LoanApi.Models
             {
                 id = this.RowKey,
                 balance = this.Balance,
+                interest = this.Interest,
+                earlyRepaymentFee = this.EarlyRepaymentFee,
+                payoutOrCarryover = this.Balance + this.Interest + this.EarlyRepaymentFee,
             };
         }
     }
