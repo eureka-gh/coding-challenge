@@ -1,16 +1,16 @@
-﻿using loanapi.Models.Definition;
+﻿using LoanApi.Models.Definition;
 using Microsoft.WindowsAzure.Storage.Table;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace loanapi.Models
+namespace LoanApi.Models
 {
     public class LoanEntity: TableEntity
     {
-        public static string TableName = "Loan";
-        private static string FixedPartitionKey = "Region"; // use fixed partition key as temp solution. should extended for user's location info like postcode or state region
+        public static string TableName = "PersonalLoan";
+        public static string FixedPartitionKey = "Region"; // use fixed partition key as temp solution. should extended for user's location info like postcode or state region
 
         public LoanEntity() { }
 

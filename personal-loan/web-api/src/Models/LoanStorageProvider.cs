@@ -1,4 +1,4 @@
-﻿using loanapi.Models.Definition;
+﻿using LoanApi.Models.Definition;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Table;
 using System;
@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace loanapi.Models
+namespace LoanApi.Models
 {
     public class LoanStorageProvider
     {
@@ -23,9 +23,9 @@ namespace loanapi.Models
         {
             if (_tclient == null)
             {
-                CloudStorageAccount storageAccount = CloudStorageAccount.Parse(Environment.GetEnvironmentVariable("AzureWebJobsStorage"));
+                CloudStorageAccount storageAccount = CloudStorageAccount.Parse(System.Configuration.ConfigurationManager.AppSettings["AzureStorageConnectionString"]??"UseDevelopmentStorage=true");
                 _tclient = storageAccount.CreateCloudTableClient();
-                _table = _tclient.GetTableReference(LoanEntity.TableName + Environment.GetEnvironmentVariable("Environment")??"LocDev");
+                _table = _tclient.GetTableReference(LoanEntity.TableName + System.Configuration.ConfigurationManager.AppSettings["Environment"]??"LocDev");
                 _table.CreateIfNotExists();
             }
         }
@@ -38,6 +38,15 @@ namespace loanapi.Models
 
             all.AddRange(getTableHandler().ExecuteQuery(query)?.Select(e => e.ToDefinition()).ToList());
             return all;
+        }
+
+        public static LoanDefinition GetLoanById(string Id)
+        {
+            var retriveOperation = TableOperation.Retrieve<LoanEntity>(LoanEntity.FixedPartitionKey, Id);
+
+            var ret = getTableHandler().Execute(retriveOperation);
+            var entity = ret?.Result as LoanEntity;
+            return entity?.ToDefinition();
         }
     }
 }

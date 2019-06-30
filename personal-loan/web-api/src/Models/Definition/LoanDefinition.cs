@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace loanapi.Models.Definition
+namespace LoanApi.Models.Definition
 {
     public class LoanDefinition : object
     {
