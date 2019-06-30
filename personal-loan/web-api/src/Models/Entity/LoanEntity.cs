@@ -14,15 +14,16 @@ namespace LoanApi.Models
 
         public LoanEntity() { }
 
-        public LoanEntity(string id, int balance)
+        public LoanEntity(string id, int balance, string userId)
         {
             this.RowKey = id;
             this.PartitionKey = FixedPartitionKey;
+            this.UserId = userId;
             this.Balance = balance;
         }
 
-        public string UserId;
-        public int Balance;
+        public string UserId { get; set; }
+        public int Balance { get; set; }
 
         public LoanDefinition ToDefinition()
         {
