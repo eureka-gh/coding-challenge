@@ -1,6 +1,6 @@
 ## Hao Gao's comments
-- The UI(frontend) is hosted on public azure environment: https://personalloan-portal-dev.azurewebsites.net
-- The Web API(backend) is deployed to public azure environment
+- The UI (frontend) is hosted on public azure environment: https://personalloan-portal-dev.azurewebsites.net
+- The Web API (backend) is deployed to public azure environment
   the swagger definition for the web api can be accessed via http://webappdotnetframework.azurewebsites.net/swagger/ui/index#/
 - For simplicity, I enabled the azure storage table for Data source, 
   Now the data source contains fixed value for one user which Id is 1, and there're 3 loans belongs to the user
