@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/987e33bf-8713-45cf-93c5-7055c9cca413/resourceGroups/webapp-resgrp/providers/Microsoft.Web/sites/personalloan-portal-dev",
+    "appService.deploySubpath": "dist\\person-loan"
+}

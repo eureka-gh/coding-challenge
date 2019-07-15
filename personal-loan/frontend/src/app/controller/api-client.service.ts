@@ -20,7 +20,7 @@ export class ApiClient {
     /*
      * cloud deployment
      */
-    private loanProviderUri = 'http://webappdotnetframework.azurewebsites.net/api';
+    private loanProviderUri = 'https://webappdotnetframework.azurewebsites.net/api';
 
     constructor(private http: HttpClient) { }
 
