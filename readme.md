@@ -1,3 +1,10 @@
+##Hao Gao's comments
+the web api is deployed to public azure environment
+the swagger definition for the web api can be accessed via http://webappdotnetframework.azurewebsites.net/swagger/ui/index#/
+For simplicity I enable the azure storage table for Data source, 
+Now the data source contains fixed value for one user which Id is 1, and there're 3 loans belongs to the user
+use "http://webappdotnetframework.azurewebsites.net/api/user/1/loan" to get list of loans for user id == 1 
+
 # Coding Challenge 
 
 ## Overview
