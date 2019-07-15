@@ -12,7 +12,16 @@ const httpOptions = {
 @Injectable({ providedIn: 'root' })
 
 export class ApiClient {
+    /*
+     * local debug build
     private loanProviderUri = 'http://localhost:11202/api';
+    */
+
+    /*
+     * cloud deployment
+     */
+    private loanProviderUri = 'http://webappdotnetframework.azurewebsites.net/api';
+
     constructor(private http: HttpClient) { }
 
     /** GET Loans from the server */
